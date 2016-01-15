@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">BTDetector</string>
+    <string name="app_name">Android BlueTooth Detector</string>
+    <string name="activity_btdetector_main_button_detectar">Detectar</string>
 </resources>

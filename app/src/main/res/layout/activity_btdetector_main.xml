@@ -9,9 +9,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.idi.feseju.btdetector.BTDetectorMainActivity">
 
+    <Button
+        android:id="@+id/BtdetectorMainButtonDetectar"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/activity_btdetector_main_button_detectar"
+        />
+
     <TextView
+        android:id="@+id/textOutputBluetooth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="" />
 
 </RelativeLayout>
