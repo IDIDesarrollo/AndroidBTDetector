@@ -1,14 +1,13 @@
 package com.idi.feseju.btdetector;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.view.Menu;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -45,6 +44,24 @@ public class BTDetectorMainActivity extends AppCompatActivity {
 
     } // End onCreate
 
+    @Override
+    protected void onDestroy() {
+        stopBluetoothDiscovery();
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onPause() {
+        stopBluetoothDiscovery();
+        super.onPause();
+    }
+
+    void stopBluetoothDiscovery() {
+        if ( BTAdapter.isDiscovering() ) {
+            BTAdapter.cancelDiscovery();
+            Log.v("MAIN","Stopping Discovery");
+        }
+    }
 
     private final BroadcastReceiver receiver = new BroadcastReceiver(){
         @Override
