@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Android BlueTooth Detector</string>
     <string name="activity_btdetector_main_button_detectar">Detectar</string>
+
+    <!-- Mensajes de error -->
+    <string name="ble_not_supported">BLE not supported</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported</string>
+    <string name="error_bluetooth_not_enabled">Bluetooth not enabled</string>
+
+    <!--Mensajes de interfaz-->
+    <string name="aceptar">Aceptar</string>
 </resources>
